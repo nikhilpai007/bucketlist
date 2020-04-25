@@ -1,0 +1,104 @@
+/* Navigation Bar */
+/* Code partially sourced from: https://www.w3schools.com/css/css_dropdowns.asp */
+nav {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: baseline;
+  width: auto;
+  margin: 1rem 2rem;
+}
+
+/* Style anchors */
+nav a {
+  font-size: 0.9rem;
+  color: #000;
+  text-align: center;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+}
+
+/* Float logo left */
+.nav-logo{
+  margin-left: 2rem;
+  float: left;
+}
+
+/* Unique style for search bar */
+.nav-search-bar {
+  display: inline-block;
+}
+
+input[id="nav-search-string"] {
+  width: auto;
+  height: auto;
+  
+  padding: 0.4rem;
+  background-color: #F7FFF6;
+  border: 1px solid #000;
+  border-radius: 0.4rem;
+}
+
+/* Button styling */
+.nav-button-login {
+  border: 1px solid #E63946;
+  border-radius: 0.4rem;
+  margin-left: 1rem;
+  background-color: #E63946;
+  color: #F1FAEE;
+}
+
+.nav-button-login:hover {
+  border: 1px solid #E63946;
+  border-radius: 0.4rem;
+  background-color: #E63946;
+  color: #F1FAEE;
+}
+
+.nav-dropdown-lists, .nav-dropdown-account {
+  overflow: hidden;
+}
+
+.nav-dropdown-lists .nav-button-lists, .nav-dropdown-account .nav-button-account {
+  font-size: 0.9rem;  
+  border: none;
+  outline: none;
+  color: #000;
+  padding: 1rem 1.1rem;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+nav a:hover, .nav-dropdown-lists:hover .nav-button-lists, .nav-dropdown-account:hover .nav-button-account {
+  cursor: pointer; /* For consistency between anchors and dropdown buttons */
+  transition: ease-in 0.15s;
+  text-decoration: underline;
+}
+
+.nav-dropdown-lists-content, .nav-dropdown-account-content {
+  display: none;
+  position: absolute;
+  background-color: #F1FAEE;
+  min-width: 10rem;
+  box-shadow: 0 0.8rem 0.8rem 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.nav-dropdown-lists-content a, .nav-dropdown-account-content a {
+  color: black;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-dropdown-lists-content a:hover, .nav-dropdown-account-content a:hover {
+  background-color: #E63946;
+  color: #F1FAEE;
+}
+
+.nav-dropdown-lists:hover .nav-dropdown-lists-content, .nav-dropdown-account:hover .nav-dropdown-account-content {
+  display: block;
+}
